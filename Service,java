@@ -1,0 +1,27 @@
+package com.Texla.ServicePack;
+
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.Scanner;
+
+public class Service  {
+	String fileName="Hello.txt";
+	
+	
+	
+	public String getHtmlData()throws IOException{
+		
+		URL url = new URL("http://www.google.com/");
+		Scanner scanner = new Scanner(url.openStream());
+		StringBuffer stringBuffer = new StringBuffer();
+	       		      
+	      while(scanner.hasNext()) {
+	         stringBuffer.append(scanner.next());
+	      }
+	      String data = stringBuffer.toString();
+	     return data;
+	}
+	
+
+}
